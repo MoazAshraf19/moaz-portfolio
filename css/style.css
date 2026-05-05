@@ -665,21 +665,21 @@ svg {
 }
 
 .featured-project-wrap {
-  max-width: 980px;
+  max-width: 860px;
   margin: 0 auto 28px;
 }
 
 .premium-project {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
-  padding: 18px;
+  padding: 14px;
   border-radius: 26px;
 }
 
 .premium-project-image {
-  min-height: 280px;
+  min-height: 240px;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(167, 139, 250, 0.22);
@@ -689,7 +689,7 @@ svg {
 .premium-project-image img {
   width: 100%;
   height: 100%;
-  min-height: 280px;
+  min-height: 240px;
   object-fit: cover;
 }
 
@@ -717,7 +717,7 @@ svg {
 
 .premium-project-content h3 {
   margin-bottom: 12px;
-  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
@@ -725,19 +725,19 @@ svg {
 .premium-project-content p {
   color: var(--muted);
   margin-bottom: 16px;
-  font-size: 0.92rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .premium-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 14px 0;
+  margin: 12px 0;
 }
 
 .premium-stats div {
-  padding: 12px 10px;
+  padding: 10px 8px;
   border: 1px solid rgba(167, 139, 250, 0.16);
   border-radius: 14px;
   background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
@@ -745,15 +745,15 @@ svg {
 
 .premium-stats strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   color: #ffffff;
 }
 
 .premium-stats span {
   color: var(--muted-2);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 750;
 }
 
@@ -761,16 +761,16 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 14px 0 18px;
+  margin: 12px 0 14px;
 }
 
 .tech-list span {
-  padding: 6px 10px;
+  padding: 5px 9px;
   border-radius: 999px;
   border: 1px solid rgba(167, 139, 250, 0.18);
   color: var(--muted);
   background: rgba(255, 255, 255, 0.03);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
 }
 
@@ -785,7 +785,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 980px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
@@ -980,7 +980,7 @@ svg {
 
   .premium-project-image,
   .premium-project-image img {
-    min-height: 260px;
+    min-height: 240px;
   }
 }
 
@@ -998,98 +998,71 @@ svg {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
-    min-height: 430px;
-  }
-
-  .premium-stats {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 720px) {
-  .container {
-    width: min(100% - 24px, var(--container));
-  }
-
-  .section {
-    padding: 68px 0;
-  }
-
-  .skills-grid,
-  .contact-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: clamp(3.1rem, 16vw, 5.2rem);
-  }
-
-  .hero-actions,
-  .project-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .hero-tags {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .hero-tags i {
-    display: none;
-  }
-
-  .hero-visual {
-    transform: scale(0.78);
-    margin: -45px 0 -70px;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 14px 18px;
-  }
-
   .menu-button {
-    display: block;
+    display: grid;
+    place-items: center;
   }
 
   .nav-links {
     display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px 0 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
   }
 
-  .nav-links.show {
-    display: flex;
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer-right {
-    text-align: center;
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .premium-stats {
+  .other-projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .featured-project-wrap {
+    max-width: 100%;
+  }
+
+  .about-grid,
+  .contact-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-cards {
     grid-template-columns: 1fr;
   }
 
-  .premium-actions {
-    flex-direction: column;
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
   }
 
-  .premium-actions .btn,
-  .project-card-actions .btn {
-    width: 100%;
+  .premium-project-content h3 {
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  }
+
+  .tech-list {
+    gap: 6px;
+  }
+
+  .tech-list span {
+    padding: 4px 7px;
+    font-size: 0.65rem;
   }
 }
