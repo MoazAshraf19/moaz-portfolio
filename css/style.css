@@ -826,30 +826,46 @@ svg {
   flex-wrap: wrap;
 }
 
+/* Compact Projects - Fixed */
 .compact-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 24px;
   max-width: 1060px;
-  margin: 0 auto;
+  margin: 26px auto 0;
 }
 
 .compact-project {
+  position: relative;
+  overflow: hidden;
   padding: 16px;
-  border-radius: 24px;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
+  min-height: 560px;
   transition: 0.28s ease;
+}
+
+.compact-project::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(168, 85, 247, 0.14), transparent 35%),
+    radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.14), transparent 38%);
+  pointer-events: none;
 }
 
 .compact-image,
 .portfolio-preview {
-  border-radius: 18px;
+  position: relative;
+  height: 255px;
+  border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(167,139,250,0.18);
-  background: rgba(255,255,255,0.025);
-  min-height: 220px;
+  border: 1px solid rgba(167, 139, 250, 0.20);
+  background: rgba(255, 255, 255, 0.025);
+  flex-shrink: 0;
 }
 
 .compact-image img {
@@ -862,39 +878,60 @@ svg {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(circle at center, rgba(168,85,247,0.20), transparent 58%),
-    linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    radial-gradient(circle at center, rgba(168, 85, 247, 0.24), transparent 58%),
+    linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
 }
 
 .portfolio-mark {
-  width: 76px;
-  height: 76px;
-  border-radius: 24px;
+  width: 82px;
+  height: 82px;
+  border-radius: 26px;
   display: grid;
   place-items: center;
   color: #fff;
   background: linear-gradient(135deg, #7c3aed, #c084fc);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  box-shadow: 0 0 45px rgba(192,132,252,0.28);
+  box-shadow: 0 0 45px rgba(192, 132, 252, 0.30);
 }
 
 .compact-content {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
+}
+
+.compact-top {
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
 
 .compact-content h3 {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   line-height: 1.05;
+  letter-spacing: -0.045em;
 }
 
 .compact-content p {
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.7;
-  margin-bottom: 14px;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.compact-tags {
+  margin: auto 0 16px;
+}
+
+.compact-project .project-actions {
+  margin-top: 0;
+}
+
+.compact-project .btn {
+  min-height: 42px;
+  padding: 0 16px;
+  font-size: 0.82rem;
 }
 
 /* Contact */
@@ -986,8 +1023,18 @@ svg {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .compact-project {
+  .compact-projects {
     grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .compact-project {
+    min-height: auto;
+  }
+
+  .compact-image,
+  .portfolio-preview {
+    height: 300px;
   }
 }
 
@@ -995,8 +1042,7 @@ svg {
   .hero-grid,
   .about-grid,
   .contact-grid,
-  .featured-project,
-  .compact-projects {
+  .featured-project {
     grid-template-columns: 1fr;
   }
 
@@ -1091,6 +1137,19 @@ svg {
   .about-panel {
     padding: 18px;
     border-radius: 22px;
+  }
+
+  .compact-projects {
+    gap: 18px;
+  }
+
+  .compact-image,
+  .portfolio-preview {
+    height: 220px;
+  }
+
+  .compact-content h3 {
+    font-size: 1.55rem;
   }
 
   .footer-grid {
