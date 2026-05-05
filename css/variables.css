@@ -1,0 +1,17 @@
+:root {
+    --bg: #050613;
+    --card: rgba(16, 19, 38, .78);
+    --card-hover: rgba(23, 27, 52, .92);
+    --border: rgba(167, 139, 250, .18);
+    --border-strong: rgba(167, 139, 250, .42);
+    --text: #fff;
+    --muted: #c3c7dc;
+    --muted-2: #8e94b2;
+    --violet: #7c3aed;
+    --violet-2: #a855f7;
+    --violet-3: #c084fc;
+    --radius-xl: 28px;
+    --container: 1180px;
+    --shadow: 0 28px 90px rgba(0, 0, 0, .28);
+    --glow: 0 22px 70px rgba(124, 58, 237, .28)
+}
