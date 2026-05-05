@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Moaz Ashraf Fayez | Junior Flutter Developer</title>
+  <title>Moaz Ashraf Fayez | Flutter Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,26 +17,25 @@
   <div class="page-bg"></div>
   <div class="noise-layer"></div>
 
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar">
         <a href="#home" class="brand">
-          <span class="brand-mark">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 19V5h3l5 7 5-7h3v14h-3V10l-5 7-5-7v9z"></path>
-            </svg>
-          </span>
+          <span class="brand-mark">M</span>
           <span>Moaz Ashraf Fayez</span>
         </a>
 
-        <button class="menu-button" id="menuButton" aria-label="Open navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-        <div class="nav-links" id="navLinks">
-          <a href="#home" class="active">Home</a>
+        <label for="menu-toggle" class="menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
@@ -47,7 +46,7 @@
   </header>
 
   <main>
-    <!-- Home -->
+    <!-- Hero -->
     <section class="hero section" id="home">
       <div class="container">
         <div class="hero-grid">
@@ -73,54 +72,20 @@
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">
-                <svg class="icon" viewBox="0 0 24 24">
-                  <path d="M5 12h14"></path>
-                  <path d="M13 5l7 7-7 7"></path>
-                </svg>
-                View Projects
-              </a>
-
-              <a class="btn btn-secondary" href="#contact">
-                <svg class="icon" viewBox="0 0 24 24">
-                  <path d="M4 4h16v16H4z"></path>
-                  <path d="m4 7 8 6 8-6"></path>
-                </svg>
-                Contact Me
-              </a>
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Contact Me</a>
             </div>
 
             <div class="hero-tags">
-              <span>
-                <svg class="icon-mini" viewBox="0 0 24 24">
-                  <path d="M13 2 3 14h8l-1 8 11-14h-8z"></path>
-                </svg>
-                Fast Learner
-              </span>
-
+              <span>Fast Learner</span>
               <i></i>
-
-              <span>
-                <svg class="icon-mini" viewBox="0 0 24 24">
-                  <path d="m8 9-4 3 4 3"></path>
-                  <path d="M16 9l4 3-4 3"></path>
-                  <path d="M14 4l-4 16"></path>
-                </svg>
-                Clean Code
-              </span>
-
+              <span>Clean Code</span>
               <i></i>
-
-              <span>
-                <svg class="icon-mini" viewBox="0 0 24 24">
-                  <path d="M12 2l2.2 6.6L21 10l-5 4.3L17.5 21 12 17.3 6.5 21 8 14.3 3 10l6.8-1.4L12 2z"></path>
-                </svg>
-                UI Focused
-              </span>
+              <span>UI Focused</span>
             </div>
           </div>
 
-          <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual">
             <div class="visual-orbit orbit-one"></div>
             <div class="visual-orbit orbit-two"></div>
 
@@ -179,13 +144,7 @@
 
           <div class="about-panel glass-card">
             <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="8"></circle>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </div>
-
+              <div class="info-icon">01</div>
               <div>
                 <h3>Goal</h3>
                 <p>To grow as a Flutter developer and build useful, polished mobile applications.</p>
@@ -193,13 +152,7 @@
             </div>
 
             <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                </svg>
-              </div>
-
+              <div class="info-icon">02</div>
               <div>
                 <h3>Focus</h3>
                 <p>Flutter UI, responsive layouts, clean structure, and simple user flows.</p>
@@ -207,13 +160,7 @@
             </div>
 
             <div class="info-row">
-              <div class="info-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M20 21a8 8 0 0 0-16 0"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-
+              <div class="info-icon">03</div>
               <div>
                 <h3>Design Mindset</h3>
                 <p>Combining development, UI/UX thinking, and graphic design for better results.</p>
@@ -239,13 +186,9 @@
         </div>
 
         <div class="skills-category-grid">
-
           <article class="skill-category glass-card">
             <div class="category-header">
-              <div class="category-icon">
-                <span>FL</span>
-              </div>
-
+              <div class="category-icon">FL</div>
               <div>
                 <span class="category-kicker">Mobile Development</span>
                 <h3>Flutter Development</h3>
@@ -271,10 +214,7 @@
 
           <article class="skill-category glass-card">
             <div class="category-header">
-              <div class="category-icon">
-                <span>UX</span>
-              </div>
-
+              <div class="category-icon">UX</div>
               <div>
                 <span class="category-kicker">Product Thinking</span>
                 <h3>UI/UX Design</h3>
@@ -300,10 +240,7 @@
 
           <article class="skill-category glass-card">
             <div class="category-header">
-              <div class="category-icon">
-                <span>GD</span>
-              </div>
-
+              <div class="category-icon">GD</div>
               <div>
                 <span class="category-kicker">Creative Design</span>
                 <h3>Graphic Design</h3>
@@ -329,10 +266,7 @@
 
           <article class="skill-category glass-card">
             <div class="category-header">
-              <div class="category-icon">
-                <span>TW</span>
-              </div>
-
+              <div class="category-icon">TW</div>
               <div>
                 <span class="category-kicker">Workflow</span>
                 <h3>Tools & Workflow</h3>
@@ -355,7 +289,6 @@
               <span>Portfolio Setup</span>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -375,7 +308,7 @@
         </div>
 
         <div class="portfolio-projects-grid">
-
+          <!-- Green Mart -->
           <article class="portfolio-project-card greenmart-card">
             <div class="project-glow"></div>
 
@@ -433,6 +366,7 @@
             </div>
           </article>
 
+          <!-- Taskati -->
           <article class="portfolio-project-card taskati-card">
             <div class="project-glow"></div>
 
@@ -489,6 +423,7 @@
             </div>
           </article>
 
+          <!-- Portfolio -->
           <article class="portfolio-project-card portfolio-card">
             <div class="project-glow"></div>
 
@@ -545,12 +480,69 @@
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="section-copy">
+            <div class="section-label">Contact</div>
+
+            <h2>Get In Touch</h2>
+
+            <p>
+              I am open to opportunities, collaboration, and project discussions.
+              Feel free to reach out.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <a class="contact-card glass-card" href="mailto:mo3zashraf19@gmail.com">
+              <div class="contact-icon">✉</div>
+              <h3>Email</h3>
+              <p>mo3zashraf19@gmail.com</p>
+            </a>
+
+            <a class="contact-card glass-card" href="https://www.linkedin.com/in/moaz-ashraf-635383394" target="_blank" rel="noreferrer">
+              <div class="contact-icon">in</div>
+              <h3>LinkedIn</h3>
+              <p>moaz-ashraf-635383394</p>
+            </a>
+
+            <a class="contact-card glass-card" href="https://github.com/MoazAshraf19" target="_blank" rel="noreferrer">
+              <div class="contact-icon">GH</div>
+              <h3>GitHub</h3>
+              <p>github.com/MoazAshraf19</p>
+            </a>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">⌖</div>
+              <h3>Location</h3>
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="js/main.js"></script>
+  <!-- Footer -->
+  <div class="footer-line"></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Moaz Ashraf Fayez</strong>
+        <span>Junior Flutter Developer</span>
+      </div>
+
+      <p>© 2026 Moaz Ashraf Fayez. All rights reserved.</p>
+
+      <p class="footer-right">Built with passion & Flutter</p>
+    </div>
+  </footer>
 </body>
 </html>
