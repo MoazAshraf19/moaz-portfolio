@@ -1,1 +1,34 @@
-const menuButton = document.getElementById("menuButton"); const navLinks = document.getElementById("navLinks"); const links = document.querySelectorAll(".nav-links a"); const sections = document.querySelectorAll("section[id]"); menuButton.addEventListener("click", () => navLinks.classList.toggle("show")); links.forEach(link => link.addEventListener("click", () => navLinks.classList.remove("show"))); window.addEventListener("scroll", () => { let current = "home"; sections.forEach(section => { if (window.scrollY >= section.offsetTop - 150) { current = section.getAttribute("id") } }); links.forEach(link => { link.classList.remove("active"); if (link.getAttribute("href") === `#${current}`) { link.classList.add("active") } }) });
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
+const links = document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll("section[id]");
+
+menuButton.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
+window.addEventListener("scroll", () => {
+  let current = "home";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  links.forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
